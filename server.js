@@ -70,3 +70,7 @@ app.post("/api/render-voice", async (req, res) => {
 });
 
 app.listen(3001, () => console.log("Server running on http://localhost:3001"));
+
+// Serve static files
+const path = require('path');
+app.use(express.static(path.join(__dirname, 'public')));
